@@ -61,8 +61,8 @@ If you don’t see it working, connect to AKS dashboard, select kube-system name
 az aks browse --resource-group netcore_linux --name netcorelinux-aksingresscluster
 
 
-http://aksingress2.eastus.cloudapp.azure.com/appv2/api/ingress
+http://HostDNSNAME/appv2/api/ingress
 This request is being served by : appv2-deploy-{machineid} having version Ingress Version 2
 
-http://aksingress2.eastus.cloudapp.azure.com/appv1/api/ingress
+http://HostDNSNAME/appv1/api/ingress
 This request is being served by : appv1-deploy--{machineid} having version Ingress Version 1 
