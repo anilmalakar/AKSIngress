@@ -1,0 +1,25 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  annotations:
+    kubernetes.io/ingress.class: nginx
+    nginx.ingress.kubernetes.io/rewrite-target: /$2
+  name: approuting
+  namespace: kube-system
+spec:
+  rules:
+    - host: aksingress2.eastus.cloudapp.azure.com
+      http:
+        paths:
+          - backend:
+              serviceName: appv1svc
+              servicePort: 80
+            path: /appv1(/|$)(.*)
+          - backend:
+              serviceName: appv2svc
+              servicePort: 80
+            path: /appv2(/|$)(.*)
+          - backend:
+              serviceName: appv1svc
+              servicePort: 80
+            path: /*(/|$)(.*)

@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.168
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AKSIngress.API", "AKSIngress.API\AKSIngress.API.csproj", "{905FDF7A-0A56-47DD-875D-2BA33558287C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AKSIngress.Business", "AKSIngress.Business\AKSIngress.Business.csproj", "{D737CB22-CC7F-4224-9BE7-AA2EC3A37C3B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{905FDF7A-0A56-47DD-875D-2BA33558287C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{905FDF7A-0A56-47DD-875D-2BA33558287C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{905FDF7A-0A56-47DD-875D-2BA33558287C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{905FDF7A-0A56-47DD-875D-2BA33558287C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D737CB22-CC7F-4224-9BE7-AA2EC3A37C3B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D737CB22-CC7F-4224-9BE7-AA2EC3A37C3B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D737CB22-CC7F-4224-9BE7-AA2EC3A37C3B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D737CB22-CC7F-4224-9BE7-AA2EC3A37C3B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1412FF05-B449-445C-9BFF-819527EA2BD5}
+	EndGlobalSection
+EndGlobal

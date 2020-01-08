@@ -1,0 +1,69 @@
+# App1 deployment
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: appv1-deploy
+  namespace:  kube-system
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app:  appv1
+  template:
+    metadata:
+      labels:
+           app: appv1
+    spec:
+      containers:
+      - name: appv1
+        image: netcorelinuxdns.azurecr.io/aksingress:v1
+        ports:
+        - containerPort: 80
+---
+# App1 Service
+apiVersion: v1
+kind: Service
+metadata:
+  name: appv1svc
+  namespace:  kube-system
+spec:
+  type: ClusterIP
+  ports:
+  - port: 80
+  selector:
+    app: appv1
+---
+# App2 deployment
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: appv2-deploy
+  namespace:  kube-system
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app:  appv2
+  template:
+    metadata:
+      labels:
+        app: appv2
+    spec:
+      containers:
+      - name: appv2
+        image: netcorelinuxdns.azurecr.io/aksingress:v2
+        ports:
+        - containerPort: 80
+---
+# App2 Service
+apiVersion: v1
+kind: Service
+metadata:
+  name: appv2svc
+  namespace:  kube-system
+spec:
+  type: ClusterIP
+  ports:
+  - port: 80
+  selector:
+    app: appv2

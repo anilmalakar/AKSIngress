@@ -1,0 +1,34 @@
+#This file is use for without ingress.
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: cmaks-deployment
+  labels:
+    app: cmaks
+spec:
+  replicas: 3
+  template:
+    metadata:
+      name: cmaks
+      labels:
+        app: cmaks
+    spec:
+      containers:
+      - name: cmakscontainer
+        image: netcorelinuxdns.azurecr.io/akscmapline:v1
+        imagePullPolicy: Always
+      restartPolicy: Always
+  selector:
+    matchLabels:
+      app: cmaks
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: cmaks-service
+spec:
+  selector:
+    app: cmaks
+  ports:
+    - port: 80
+  type: LoadBalancer
